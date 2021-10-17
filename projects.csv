@@ -1,5 +1,5 @@
-remote,sha1
-https://github.com/openssl/openssl/,OpenSSL_1_0_1f
+remote,sha1,notes
+https://github.com/openssl/openssl/,OpenSSL_1_0_1f,heartbleed bug
 https://github.com/WebGoat/WebGoat
 https://github.com/raesene/bWAPP
 https://github.com/logicalhacking/DVHMA
