@@ -31,7 +31,6 @@ foreach($_ in $repoData) {
 
         Pop-Location
 
-        git checkout $_.sha1
     } else {
         Write-Host ""
     }
