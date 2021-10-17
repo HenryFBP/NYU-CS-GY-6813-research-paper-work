@@ -1,5 +1,9 @@
 $repoData = Import-Csv -Path .\projects.csv
 
+if (!(Test-Path -Path repos)){
+    mkdir repos
+}
+
 Push-Location repos
 
 foreach($_ in $repoData) {
