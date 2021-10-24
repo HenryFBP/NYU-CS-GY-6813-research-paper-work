@@ -16,13 +16,13 @@ foreach($_ in $repoData) {
     # if path exists...
     if(Test-Path -Path $foldername){
         Write-Host "[+] Folder '$foldername' `t already exists, not cloning..."
-        continue;
+    } else {
+        git.exe clone $_.remote
     }
 
-    git.exe clone $_.remote
 
     if($_.sha1){
-        Write-Host " and checkout to commit/reference $($_.sha1)"
+        Write-Host "Going to checkout to commit/reference $($_.sha1)"
         
         # cd to the folder it was cloned to
         Push-Location $foldername
@@ -34,6 +34,21 @@ foreach($_ in $repoData) {
     } else {
         Write-Host ""
     }
+
+    if(!($_.tooltype)){
+        write-host "[x] Project tooltype is not set! This should be fixed!"
+        exit;
+    } 
+
+    switch ($_.tooltype) {
+        "gradle" { 
+
+         }
+        Default {
+            write-host "unknown project type "
+        }
+    }
+
 }
 
 Pop-Location

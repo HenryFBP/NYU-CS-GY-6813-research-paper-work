@@ -1,8 +1,22 @@
+if (test-path 'reports'){
+    Remove-Item 'reports' -Recurse -Force;
+}
+
+mkdir reports
+
+$basedir = Resolve-Path "./reports"
+
 Get-ChildItem "./repos" | 
 Foreach-Object {
-    pushd $_.FullName
 
-    snyk.exe monitor
+    $reportName = $_.BaseName + ".report"
 
-    popd
+    Push-Location $_.FullName
+
+
+    snyk.exe monitor > $(Join-Path -Path $basedir -ChildPath "$reportName.snyk.txt")
+
+    bandit . -r > $(Join-Path -Path $basedir -ChildPath "$reportName.bandit.txt")
+
+    Pop-Location
 }
