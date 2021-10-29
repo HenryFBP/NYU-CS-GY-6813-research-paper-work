@@ -1,12 +1,12 @@
 remote,sha1,notes,tooltype
-https://github.com/openssl/openssl/,OpenSSL_1_0_1f,heartbleed bug,make
-https://github.com/HenryFBP/WebGoat,,maven
-https://github.com/HenryFBP/bWAPP,,php
-https://github.com/logicalhacking/DVHMA,,maven
-https://github.com/fportantier/vulpy,,python
-https://github.com/juice-shop/juice-shop,,npm
-https://github.com/abhi-r3v0/EVABS
-https://github.com/s4n7h0/xvwa
-https://github.com/incredibleindishell/SSRF_Vulnerable_Lab
-https://github.com/incredibleindishell/CORS-vulnerable-Lab
-https://github.com/incredibleindishell/CORS_vulnerable_Lab-Without_Database
+https://github.com/openssl/openssl/,OpenSSL_1_0_1f,heartbleed bug,c_make
+https://github.com/HenryFBP/WebGoat/,"","",java_maven
+https://github.com/HenryFBP/bWAPP/,,,php
+https://github.com/logicalhacking/DVHMA/,,,java_maven
+https://github.com/HenryFBP/vulpy/,,,python_requirements
+https://github.com/juice-shop/juice-shop/,,,nodejs_npm
+https://github.com/abhi-r3v0/EVABS/
+https://github.com/s4n7h0/xvwa/
+https://github.com/incredibleindishell/SSRF_Vulnerable_Lab/
+https://github.com/incredibleindishell/CORS-vulnerable-Lab/
+https://github.com/incredibleindishell/CORS_vulnerable_Lab-Without_Database/

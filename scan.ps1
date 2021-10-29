@@ -1,4 +1,4 @@
-if (test-path 'reports'){
+if (test-path 'reports') {
     Remove-Item 'reports' -Recurse -Force;
 }
 
@@ -13,6 +13,8 @@ Foreach-Object {
 
     Push-Location $_.FullName
 
+    $projectType = get-content (Join-Path -Path $_.FullName -ChildPath "TOOLTYPE.txt")
+    write-host "Project type is $projectType"
 
     snyk.exe monitor > $(Join-Path -Path $basedir -ChildPath "$reportName.snyk.txt")
 
