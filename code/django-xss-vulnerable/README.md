@@ -6,3 +6,8 @@
 
 # How do I run the test cases?
 - In terminal, run `python manage.py test`.
+
+# Migrations?
+
+    python manage.py makemigrations myproject
+    python manage.py migrate
